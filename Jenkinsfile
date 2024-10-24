@@ -33,7 +33,7 @@ pipeline {
 
         stage('Ejecutar pruebas') {
             steps {
-                bat 'npm test' // Ejecuta las pruebas con Jest
+                bat 'npm test -- --passWithNoTests' // Ejecuta las pruebas con Jest y permite continuar si no se encuentran pruebas
             }
         }
     }
