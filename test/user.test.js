@@ -1,3 +1,4 @@
+//C:\Users\Glory\Desktop\PROYECTOS\JenkinsNode\test\user.test.js
 const User = require('../models/user'); // Importa el modelo User
 
 // Simula el modelo de usuario usando jest.mock
