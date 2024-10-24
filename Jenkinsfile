@@ -2,16 +2,20 @@ pipeline {
     agent any
 
     stages {
-        stage('Clonar repositorio') {
-            steps {
-                git 'https://github.com/jhonny1997str/JenkinsNode.git'
-            }
-        }
-
         stage('Verificar Node y npm') {
             steps {
                 bat 'node -v'
                 bat 'npm -v'
+            }
+        }
+
+        stage('Verificar package.json') {
+            steps {
+                script {
+                    if (!fileExists('package.json')) {
+                        error 'package.json no encontrado en el workspace.'
+                    }
+                }
             }
         }
 
