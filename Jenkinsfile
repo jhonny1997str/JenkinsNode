@@ -2,10 +2,16 @@ pipeline {
     agent any
 
     stages {
+        stage('Clonar repositorio') {
+            steps {
+                git 'https://github.com/jhonny1997str/JenkinsNode.git'
+            }
+        }
+
         stage('Verificar Node y npm') {
             steps {
-                bat 'node -v'  // Verifica la versión de Node.js
-                bat 'npm -v'   // Verifica la versión de npm
+                bat 'node -v'
+                bat 'npm -v'
             }
         }
 
