@@ -18,8 +18,8 @@
     "supertest": "^7.0.0"
   },
   "jest": {
-    "testMatch": [
-      "**/test/**/*.test.js"
-    ]
+    "testEnvironment": "node",
+    "testMatch": ["**/test/**/*.test.js"]
   }
+
 }
